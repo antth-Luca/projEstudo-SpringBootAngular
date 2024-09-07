@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.antth_Luca.api.model.CidadeModel;
+import io.github.antth_Luca.api.model.Cidade;
 import io.github.antth_Luca.api.repository.CidadeRepository;
 
 @RestController
@@ -24,29 +24,29 @@ public class CidadeController {
     private CidadeRepository repository;
 
     @PostMapping
-    private CidadeModel inserir(@RequestBody CidadeModel cidade) {
+    private Cidade inserir(@RequestBody Cidade cidade) {
         return repository.save(cidade);
     }
 
     @GetMapping
-    public List<CidadeModel> getAll() {
+    public List<Cidade> getAll() {
         return repository.findAll();
     }
 
     @GetMapping("/{id}")
-    public CidadeModel getById(@PathVariable Integer id) {
+    public Cidade getById(@PathVariable Integer id) {
         return repository.findById(id).get();  // 'findById' retorna um object 'option' que não tem os dados, por isso use com 'get';
     }
 
     @PutMapping
-    public CidadeModel update(@RequestBody CidadeModel cidade) {
+    public Cidade update(@RequestBody Cidade cidade) {
         return repository.save(cidade);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code=HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Integer id) {
-        CidadeModel obj = repository.findById(id).get();
+        Cidade obj = repository.findById(id).get();
         repository.delete(obj);
     }
 }
