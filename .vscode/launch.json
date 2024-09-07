@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SliApplication<Sli>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "io.github.antth_Luca.api.SliApplication",
+            "projectName": "Sli",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
