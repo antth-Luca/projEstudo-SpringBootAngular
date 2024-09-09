@@ -1,7 +1,8 @@
-# projEstudoSpringBoot
-## Projeto de estudo do Spring Boot
+# projEstudo-SpringBootAngular
+## Projeto de estudo do Spring Boot e do Angular
 
-Início 05/09/2024 - Não terminado
+Spring Boot => Início 05/09/2024 - Término 09/09/2024
+Angular => Início 10/09/2024 - Ainda não terminado
 
 Carga Horária: 200h
 
@@ -16,4 +17,4 @@ Curso disponível por [este link](https://dgscursos.com.br/Programador_Full_Stac
 
 ### Summary’s git commit
 
-    Módulo "SpringBoot02" - Aula 05 - Vídeo 03
+    Módulo "Angular01" - Aula 07 - Vídeo 01
