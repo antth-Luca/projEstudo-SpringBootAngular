@@ -14,4 +14,4 @@ Carga horária total: 200h  |  Curso disponível por [este link](https://dgscurs
 
 ### Summary’s git commit
 
-    Módulo "Angular01" - Aula 07 - Vídeo 01
+    Módulo "Angular01" - Aula 07 - Vídeo 02
