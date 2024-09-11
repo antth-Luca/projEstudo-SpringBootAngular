@@ -8,10 +8,11 @@ Carga horária total: 200h  |  Curso disponível por [este link](https://dgscurs
 ---
 ### VSCode extensions:
 * Extension Pack for Java;
-* Spring Boot Extension Pack.
+* Spring Boot Extension Pack;
+* Angular Language Service.
 
 
 
 ### Summary’s git commit
 
-    Módulo "Angular01" - Aula 07 - Vídeo 02
+    Módulo "Angular02" - Aula 08 - Vídeo 01
