@@ -3,6 +3,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    // Adições para o model não reclamar da falta de inicialização de variáveis
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": false,
+    // Demais configurações padrões
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

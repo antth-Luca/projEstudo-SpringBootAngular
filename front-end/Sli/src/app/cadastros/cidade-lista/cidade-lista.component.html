@@ -13,6 +13,16 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="d-flex justify-content-end">
+                <button class="btn btn-info me-5" (click)="novoCadastro()">
+                    <i class="fa fa-plus"></i>Novo
+                </button>
+            </nav>
+        </div>
+    </div>
+
     <div class="row m-3">
         <div class="col-md-12">
             <div *ngIf="msgSucesso" class="alert alert-success" role="alert">
@@ -31,17 +41,31 @@
 
     <div class="row m-3">
         <div class="col-md-12">
-            <div>
-                <input type="text" class="form-control" name="msgSucesso" id="msgSucesso" [(ngModel)]="msgSucesso">
-            </div>
-        </div>
-    </div>
-            
-    <div class="row m-3 mt-2">
-        <div class="col-md-12">
-            <div>
-                <input type="text" class="form-control" name="msgErro" id="msgErro" [(ngModel)]="msgErro">
-            </div>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Nome</th>
+                        <th>UF</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let cidade of cidadesLista">
+                        <td>{{ cidade.id }}</td>
+                        <td>{{ cidade.nome }}</td>
+                        <td>{{ cidade.uf }}</td>
+                        <td>
+                            <button class="btn btn-warning">
+                                <i class="fa fa-pen-square"></i>Editar</button>
+
+                            <button class="btn btn-danger">
+                                <i class="fa fa-trash"></i>Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -1,6 +1,7 @@
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Cidade } from '../model/cidade';
 
 @Component({
   selector: 'app-cidade-lista',
@@ -12,7 +13,17 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './cidade-lista.component.html',
   styleUrl: './cidade-lista.component.css'
 })
-export class CidadeListaComponent {
+export class CidadeListaComponent implements OnInit {
+  ngOnInit(): void {
+    this.geraLista();
+  }
+
+  cidadesLista: Cidade[] = [];
+
   msgSucesso: String = "";
   msgErro: String = "";
+
+  novoCadastro() { }
+
+  geraLista() { }
 }
