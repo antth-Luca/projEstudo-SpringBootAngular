@@ -1,1 +1,23 @@
-<p>cidade-lista works!</p>
+<h3 class="h3 mt-5">cidade-lista works!</h3>
+
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Consulta</li>
+</ol>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert">
+                {{ msgSucesso }}
+            </div>
+
+            <div class="alert alert-danger" role="alert">
+                {{ msgErro }}
+            </div>
+
+            <div>
+                <input type="text" class="form-control" name="msgSucesso" id="msgSucesso" [(ngModel)]="msgSucesso">
+            </div>
+        </div>
+    </div>
+</div>
