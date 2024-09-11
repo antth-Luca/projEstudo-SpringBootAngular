@@ -1,22 +1,46 @@
-<h3 class="h3 mt-5">cidade-lista works!</h3>
-
-<ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Consulta</li>
-</ol>
-
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row mx-3">
         <div class="col-md-12">
-            <div class="alert alert-success" role="alert">
+            <h3 class="h3 mt-5">cidade-lista works!</h3>
+        </div>
+    </div>
+
+    <div class="row mx-3">
+        <div class="col-md-12">
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">Consulta</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row m-3">
+        <div class="col-md-12">
+            <div *ngIf="msgSucesso" class="alert alert-success" role="alert">
                 {{ msgSucesso }}
             </div>
+        </div>
+    </div>
 
-            <div class="alert alert-danger" role="alert">
+    <div class="row m-3">
+        <div class="col-md-12">
+            <div *ngIf="msgErro" class="alert alert-danger" role="alert">
                 {{ msgErro }}
             </div>
+        </div>
+    </div>
 
+    <div class="row m-3">
+        <div class="col-md-12">
             <div>
                 <input type="text" class="form-control" name="msgSucesso" id="msgSucesso" [(ngModel)]="msgSucesso">
+            </div>
+        </div>
+    </div>
+            
+    <div class="row m-3 mt-2">
+        <div class="col-md-12">
+            <div>
+                <input type="text" class="form-control" name="msgErro" id="msgErro" [(ngModel)]="msgErro">
             </div>
         </div>
     </div>
