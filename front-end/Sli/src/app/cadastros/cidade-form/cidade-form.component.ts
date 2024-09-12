@@ -21,7 +21,7 @@ export class CidadeFormComponent implements OnInit {
   cidade: Cidade;
 
   sucesso: boolean = false;
-  erro: boolean = false;
+  erros: String[] = [];
 
   constructor(
     private service: CidadeService,
@@ -43,9 +43,29 @@ export class CidadeFormComponent implements OnInit {
     })
   }
 
-  onSubmit() { }
-
   voltarListagem() {
     this.router.navigate(['lista-cidades/']);
+  }
+
+  onSubmit() {
+    if (this.id) {
+      this.service.update(this.cidade).subscribe(response => {
+        this.sucesso = true;
+        this.erros = [];
+      }, errorResponse => {
+        this.erros = ['Falha ao editar cidade.'];
+      })
+    } else {
+      this.service.insert(this.cidade).subscribe(response => {
+        this.sucesso = true;
+        this.erros = [];
+        this.cidade = response;
+      }, errorResponse => {
+        this.sucesso = false;
+        this.erros = errorResponse.error.errors;
+      })
+    }
+
+    this.voltarListagem();
   }
 }

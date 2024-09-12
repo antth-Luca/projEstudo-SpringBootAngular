@@ -22,4 +22,12 @@ export class CidadeService {
   delete(cidade: Cidade): Observable<any> {
     return this.http.delete<any>(`${this.apiURL}/${cidade.id}`);
   }
+
+  insert(cidade: Cidade): Observable<any> {
+    return this.http.post<Cidade>(this.apiURL, cidade);
+  }
+
+  update(cidade: Cidade): Observable<any> {
+    return this.http.put<Cidade>(this.apiURL, cidade);
+  }
 }
