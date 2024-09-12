@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="row mx-3">
+        <div class="col-md-12">
+            <h3 class="h3 mt-5">cidade-form works!</h3>
+        </div>
+    </div>
+
+    <div class="row mx-3">
+        <div class="col-md-12">
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">{{ cidade.id ? 'Edição' : 'Cadastro' }}</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row m-3">
+        <div class="col-md-12">
+            <form #cidadeForm="ngForm" (ngSubmit)="onSubmit()">
+                <!-- Linha de mensagens -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div *ngIf="sucesso === true" class="alert alert-success" role="alert">
+                            {{ cidade.id ? "Cidade editada com sucesso!" : "Cidade criada com sucesso!" }}
+                        </div>
+
+                        <div *ngIf="erro === true" class="alert alert-danger" role="alert">
+                            {{ cidade.id ? "Falha ao editar cidade." : "Falha ao criar cidade." }}
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo dinâmico de ID -->
+                <div class="row" *ngIf="cidade.id">
+                    <div class="col-md-2">
+                        <label>ID</label>
+                        <input type="text" name="id" class="form-control" [(ngModel)]="cidade.id">
+                    </div>
+                </div>
+                <!-- Campo fixo de nome -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Nome</label>
+                        <input type="text" name="nome" class="form-control" [(ngModel)]="cidade.nome">
+                    </div>
+                </div>
+                <!-- Campo fixo de UF -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>UF</label>
+                        <input type="text" name="uf" class="form-control" [(ngModel)]="cidade.uf">
+                    </div>
+                </div>
+                <!-- Botões -->
+                <div class="row mt-2">
+                    <div class="col-md-3">
+                        <!-- Botão dinâmico de "Cadastrar" -->
+                        <button *ngIf="!cidade.id" type="submit" class="btn btn-success">
+                            <i class="fa fa-save"></i>Cadastrar</button>
+                        <!-- Botão dinâmico de "Alterar" -->
+                        <button *ngIf="cidade.id" type="submit" class="btn btn-primary">
+                            <i class="fa fa-sync-alt"></i>Alterar</button>
+                        <!-- Botão dinâmico de "Cancelar" -->
+                        <button type="button" class="btn btn-danger ms-1" (click)="voltarListagem()">
+                            <i class="fa fa-arrow-alt-circle-left"></i>Cancelar</button>
+                    </div>
+                </div>
+                <!-- Fim do FORM -->
+            </form>
+        </div>
+    </div>
+</div>

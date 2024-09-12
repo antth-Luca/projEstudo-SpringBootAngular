@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Route } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import { Cidade } from '../model/cidade';
 import { CidadeService } from '../../services/cidade.service';
 
@@ -9,8 +9,8 @@ import { CidadeService } from '../../services/cidade.service';
   selector: 'app-cidade-lista',
   standalone: true,
   imports: [
-    CommonModule,
-    FormsModule
+    CommonModule,  // Módulo para diretivas Angular;
+    FormsModule  // Módulo para Data Binding.
   ],
   templateUrl: './cidade-lista.component.html',
   styleUrl: './cidade-lista.component.css'
@@ -23,7 +23,8 @@ export class CidadeListaComponent implements OnInit {
   msgErro: String = "";
 
   constructor(
-    private service: CidadeService
+    private service: CidadeService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -43,5 +44,7 @@ export class CidadeListaComponent implements OnInit {
   )
   }
 
-  novoCadastro() { }
+  novoCadastro() {
+    this.router.navigate(['/nova-cidade']);
+  }
 }
