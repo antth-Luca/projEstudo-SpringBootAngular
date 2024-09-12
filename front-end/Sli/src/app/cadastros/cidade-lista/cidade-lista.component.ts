@@ -17,6 +17,7 @@ import { CidadeService } from '../../services/cidade.service';
 })
 export class CidadeListaComponent implements OnInit {
   cidadesLista: Cidade[] = [];
+  cidadeSelecionada: Cidade = new Cidade();
 
   msgSucesso: String = "";
   msgErro: String = "";
@@ -27,6 +28,19 @@ export class CidadeListaComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getAll().subscribe(response => this.cidadesLista = response);
+  }
+
+  selecionar_cidade(cidade: Cidade) {
+    this.cidadeSelecionada = cidade;
+  }
+
+  deletar() {
+    this.service.delete(this.cidadeSelecionada).subscribe(response => {
+      this.msgSucesso = "Cidade deletada!";
+      this.ngOnInit();
+    },
+    erro => this.msgErro = "Falha na deleção da cidade."
+  )
   }
 
   novoCadastro() { }
