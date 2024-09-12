@@ -3,7 +3,7 @@
 * Spring Boot => Início 05/09/2024 - Término 09/09/2024;
 * Angular => Início 10/09/2024 - Ainda não terminado.
 
-Carga horária total: 200h  |  Curso disponível por [este link](https://dgscursos.com.br/Programador_Full_Stack.html)!
+Carga horária total: 120h  |  Curso disponível por [este link](https://dgscursos.com.br/Programador_Full_Stack.html)!
 
 ---
 ### VSCode extensions:
@@ -15,4 +15,4 @@ Carga horária total: 200h  |  Curso disponível por [este link](https://dgscurs
 
 ### Summary’s git commit
 
-    Módulo "Angular02" - Aula 08 - Vídeo 01
+    Módulo "Angular03" - Aula 10 - Vídeo 01
