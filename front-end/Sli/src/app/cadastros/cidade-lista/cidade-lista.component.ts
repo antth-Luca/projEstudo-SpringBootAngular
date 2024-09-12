@@ -47,4 +47,8 @@ export class CidadeListaComponent implements OnInit {
   novoCadastro() {
     this.router.navigate(['/nova-cidade']);
   }
+
+  editarCadastro(id: number) {
+    this.router.navigate([`/editar-cidade/${id}`]);
+  }
 }

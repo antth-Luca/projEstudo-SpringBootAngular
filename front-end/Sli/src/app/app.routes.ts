@@ -10,4 +10,5 @@ export const routes: Routes = [
     { path : 'login', component: LoginComponent },
     { path : 'lista-cidades', component: CidadeListaComponent },
     { path : 'nova-cidade', component: CidadeFormComponent },
+    { path : 'editar-cidade/:id', component: CidadeFormComponent },
 ];

@@ -57,7 +57,8 @@
                         <td>{{ cidade.nome }}</td>
                         <td>{{ cidade.uf }}</td>
                         <td>
-                            <button class="btn btn-warning" title="Editar">
+                            <button class="btn btn-warning" title="Editar"
+                            (click)="editarCadastro(cidade.id)">
                                 <i class="fa fa-pen-square"></i></button>
 
                             <button class="btn btn-danger ms-2" title="Excluir"

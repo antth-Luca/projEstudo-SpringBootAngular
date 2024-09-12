@@ -23,8 +23,8 @@
                             {{ cidade.id ? "Cidade editada com sucesso!" : "Cidade criada com sucesso!" }}
                         </div>
 
-                        <div *ngIf="erro === true" class="alert alert-danger" role="alert">
-                            {{ cidade.id ? "" : "Falha ao criar cidade." }}
+                        <div *ngFor="let erro in erros" class="alert alert-danger" role="alert">
+                            {{ erro }}
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="row" *ngIf="cidade.id">
                     <div class="col-md-2">
                         <label>ID</label>
-                        <input type="text" name="id" class="form-control" [(ngModel)]="cidade.id">
+                        <input type="text" name="id" class="form-control" disabled="true" [(ngModel)]="cidade.id">
                     </div>
                 </div>
                 <!-- Campo fixo de nome -->
